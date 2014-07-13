@@ -41,8 +41,7 @@ const pkgdef :Spk.PackageDefinition = (
     # automatically by running it on a FUSE filesystem. So, the mappings
     # here are only to tell it where to find files that the app wants.
     searchPath = [
-      ( sourcePath = "etc", packagePath="etc" ),
-      ( sourcePath = ".", packagePath="wordpress" ),  # Search this directory first.
+      ( sourcePath = "."),  # Search this directory first.
       ( sourcePath = "/",    # Then search the system root directory.
         hidePaths = [ "home", "proc", "sys" ]
         # You probably don't want the app pulling files from these places,
