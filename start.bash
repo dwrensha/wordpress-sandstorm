@@ -3,7 +3,9 @@ echo "HELLO WORLD"
 mkdir -p /var/lib/nginx
 mkdir -p /var/log/nginx
 mkdir -p /var/run
+mkdir -p /var/wordpress/wp-content
 
-/usr/bin/nginx -g "pid /var/run/nginx.pid;"
+cp -r /wordpress/wp-content-read-only/* /var/wordpress/wp-content
 
-echo "started nginx. status code:" $?
+bash continue.bash
+

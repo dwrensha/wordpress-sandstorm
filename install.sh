@@ -8,3 +8,7 @@ rm sandstorm-app.zip
 mv WordPress-sandstorm-app wordpress
 cp wp-config.php wordpress/
 
+mv wordpress/wp-content wordpress/wp-content-read-only
+
+ln -s /var/wordpress/wp-content wordpress/wp-content
+
