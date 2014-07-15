@@ -28,6 +28,17 @@ if (!function_exists('apache_request_headers')) {
         }
 }
 
+$headers = apache_request_headers();
+
+if (!isset($headers['X-Sandstorm-Base-Path'])) {
+   error_log("did not find a X-Sandstorm-Base-Path header");
+   die();
+}
+
+$sandstorm_base_path = $headers['X-Sandstorm-Base-Path'];
+
+error_log('base path: ' . $sandstorm_base_path);
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'database_name_here');
@@ -96,9 +107,8 @@ define('WPLANG', '');
  */
 define('WP_DEBUG', false);
 
-// XXX what about https?
-define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
-define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
+define('WP_HOME', $sandstorm_base_path);
+define('WP_SITEURL', $sandstorm_base_path);
 define('WP_CONTENT_URL', '/wp-content');
 define('DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST']);
 
