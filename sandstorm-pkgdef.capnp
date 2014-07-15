@@ -22,17 +22,11 @@ const pkgdef :Spk.PackageDefinition = (
     actions = [
       # Define your "new document" handlers here.
       ( title = (defaultText = "New WordPress Site"),
-        command = .myCommand
-        # The command to run when starting for the first time. (".myCommand"
-        # is just a constant defined at the bottom of the file.)
+        command = .startCommand
       )
     ],
 
-    continueCommand = .myCommand
-    # This is the command called to start your app back up after it has been
-    # shut down for inactivity. Here we're using the same command as for
-    # starting a new instance, but you could use different commands for each
-    # case.
+    continueCommand = .continueCommand
   ),
 
   sourceMap = (
@@ -63,11 +57,18 @@ const pkgdef :Spk.PackageDefinition = (
   # a directory here, its entire contents will be included recursively.
 );
 
-const myCommand :Spk.Manifest.Command = (
+const startCommand :Spk.Manifest.Command = (
   # Here we define the command used to start up your server.
-  argv = ["/sandstorm-http-bridge", "10000", "--", "/usr/bin/bash", "/start.bash"],
+  argv = ["/sandstorm-http-bridge", "10000", "--", "/start.sh"],
   environ = [
     # Note that this defines the *entire* environment seen by your app.
+    (key = "PATH", value = "/usr/local/bin:/usr/bin:/bin")
+  ]
+);
+
+const continueCommand :Spk.Manifest.Command = (
+  argv = ["/sandstorm-http-bridge", "10000", "--", "/continue.sh"],
+  environ = [
     (key = "PATH", value = "/usr/local/bin:/usr/bin:/bin")
   ]
 );
