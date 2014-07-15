@@ -14,6 +14,20 @@
  * @package WordPress
  */
 
+if (!function_exists('apache_request_headers')) {
+        function apache_request_headers() {
+            foreach($_SERVER as $key=>$value) {
+                if (substr($key,0,5)=="HTTP_") {
+                    $key=str_replace(" ","-",ucwords(strtolower(str_replace("_"," ",substr($key,5)))));
+                    $out[$key]=$value;
+                }else{
+                    $out[$key]=$value;
+                }
+            }
+            return $out;
+        }
+}
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'database_name_here');
@@ -81,6 +95,12 @@ define('WPLANG', '');
  * in their development environments.
  */
 define('WP_DEBUG', false);
+
+// XXX what about https?
+define('WP_HOME', 'http://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
+define('WP_CONTENT_URL', '/wp-content');
+define('DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST']);
 
 /* That's all, stop editing! Happy blogging. */
 
