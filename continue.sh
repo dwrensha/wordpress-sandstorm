@@ -8,6 +8,8 @@ echo "started php-fpm. status code:" $?
 
 echo "started nginx. status code:" $?
 
+#./sandstorm/bin/getPublicId
+#echo "called getPublicId. status code:" $?
 
 sleep infinity
 
