@@ -39,6 +39,10 @@ $sandstorm_base_path = $headers['X-Sandstorm-Base-Path'];
 
 error_log('base path: ' . $sandstorm_base_path);
 
+if ('https' == substr($sandstorm_base_path, 0, 5)) {
+  $_SERVER['HTTPS'] = 'on';
+}
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'database_name_here');
