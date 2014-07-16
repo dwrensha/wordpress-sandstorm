@@ -30,14 +30,11 @@ if (!function_exists('apache_request_headers')) {
 
 $headers = apache_request_headers();
 
-if (!isset($headers['X-Sandstorm-Base-Path'])) {
-   error_log("did not find a X-Sandstorm-Base-Path header");
-   die();
+$sandstorm_base_path = 'http://' . $_SERVER['HTTP_HOST'];
+
+if (isset($headers['X-Sandstorm-Base-Path'])) {
+   $sandstorm_base_path = $headers['X-Sandstorm-Base-Path'];
 }
-
-$sandstorm_base_path = $headers['X-Sandstorm-Base-Path'];
-
-error_log('base path: ' . $sandstorm_base_path);
 
 if ('https' == substr($sandstorm_base_path, 0, 5)) {
   $_SERVER['HTTPS'] = 'on';
