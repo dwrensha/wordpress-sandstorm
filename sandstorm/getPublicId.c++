@@ -41,7 +41,10 @@ namespace sandstorm {
       auto result = session.getPublicIdRequest().send().wait(client.getWaitScope());
       auto publicId = result.getPublicId();
       auto hostname = result.getHostname();
-      kj::String msg = kj::str(publicId, "\n", hostname, "\n");
+      auto autoUrl = result.getAutoUrl();
+      auto isDemoUser = result.getIsDemoUser();
+      kj::String msg = kj::str(publicId, "\n", hostname, "\n", autoUrl, "\n",
+                               isDemoUser ? "true" : "false", "\n");
       kj::FdOutputStream(STDOUT_FILENO).write(msg.begin(), msg.size());
 
       return true;
