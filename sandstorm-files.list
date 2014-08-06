@@ -214,6 +214,7 @@ wordpress/wp-admin/media-new.php
 wordpress/wp-admin/menu-header.php
 wordpress/wp-admin/menu.php
 wordpress/wp-admin/network
+wordpress/wp-admin/plugin-editor.php
 wordpress/wp-admin/plugin-install.php
 wordpress/wp-admin/plugins.php
 wordpress/wp-admin/post-new.php
@@ -221,6 +222,7 @@ wordpress/wp-admin/post.php
 wordpress/wp-admin/profile.php
 wordpress/wp-admin/theme-install.php
 wordpress/wp-admin/themes.php
+wordpress/wp-admin/tools.php
 wordpress/wp-admin/update.php
 wordpress/wp-admin/upload.php
 wordpress/wp-admin/user
