@@ -145,11 +145,13 @@ wordpress/wp-admin/images
 wordpress/wp-admin/images/resize-2x.gif
 wordpress/wp-admin/images/spinner-2x.gif
 wordpress/wp-admin/images/wpspin_light-2x.gif
+wordpress/wp-admin/import.php
 wordpress/wp-admin/includes
 wordpress/wp-admin/includes/admin.php
 wordpress/wp-admin/includes/ajax-actions.php
 wordpress/wp-admin/includes/bookmark.php
 wordpress/wp-admin/includes/class-wp-comments-list-table.php
+wordpress/wp-admin/includes/class-wp-importer.php
 wordpress/wp-admin/includes/class-wp-list-table.php
 wordpress/wp-admin/includes/class-wp-media-list-table.php
 wordpress/wp-admin/includes/class-wp-plugin-install-list-table.php
@@ -290,6 +292,12 @@ wordpress/wp-content-read-only/plugins/sqlite-integration/utilities/index.php
 wordpress/wp-content-read-only/plugins/sqlite-integration/utilities/patch.php
 wordpress/wp-content-read-only/plugins/sqlite-integration/utilities/plugin_lists.json
 wordpress/wp-content-read-only/plugins/sqlite-integration/utilities/utility.php
+wordpress/wp-content-read-only/plugins/wordpress-importer
+wordpress/wp-content-read-only/plugins/wordpress-importer/languages
+wordpress/wp-content-read-only/plugins/wordpress-importer/languages/wordpress-importer.pot
+wordpress/wp-content-read-only/plugins/wordpress-importer/parsers.php
+wordpress/wp-content-read-only/plugins/wordpress-importer/readme.txt
+wordpress/wp-content-read-only/plugins/wordpress-importer/wordpress-importer.php
 wordpress/wp-content-read-only/themes
 wordpress/wp-content-read-only/themes/index.php
 wordpress/wp-content-read-only/themes/twentyeleven
@@ -716,6 +724,8 @@ wordpress/wp-includes/images/media
 wordpress/wp-includes/images/media/audio.png
 wordpress/wp-includes/images/media/video.png
 wordpress/wp-includes/images/smilies
+wordpress/wp-includes/images/smilies/icon_sad.gif
+wordpress/wp-includes/images/smilies/icon_smile.gif
 wordpress/wp-includes/images/spinner-2x.gif
 wordpress/wp-includes/images/uploader-icons-2x.png
 wordpress/wp-includes/images/wlw
