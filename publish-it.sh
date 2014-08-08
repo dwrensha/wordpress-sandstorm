@@ -1,7 +1,8 @@
 #! /bin/sh
 STATICDIR=/var/www
 TMPDIR=/var/www_`date +%s%N`
-URL=http://127.0.0.1:10000/
+URL=http://this_will_be_replaced_by_sandstorm:10000
+REPLACE_URL=$URL
 
 rm -rf $TMPDIR
 wget --mirror -p --convert-links -np -nH -e robots=off -X /wp-admin/ -P $TMPDIR $URL
@@ -14,6 +15,10 @@ for q in `find $TMPDIR -name '*\?*'`; do
     mv $q ${q%\?*};
   fi;
 done
+
+# make anying relative that wget failed to clean up
+find $TMPDIR -type f -exec sed -i "s|${REPLACE_URL}/|/|g" {} \;
+find $TMPDIR -type f -exec sed -i "s|${REPLACE_URL}|/|g" {} \; # URLs without a trailing / need to be changed to point the index
 
 
 mv $STATICDIR ${STATICDIR}_tmp

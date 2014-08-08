@@ -40,6 +40,7 @@ usr/bin/mv
 usr/bin/nginx
 usr/bin/php-fpm
 usr/bin/rm
+usr/bin/sed
 usr/bin/sendmail
 usr/bin/sh
 usr/bin/sleep
