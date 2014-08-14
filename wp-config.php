@@ -80,6 +80,7 @@ define('WP_SITEURL', $sandstorm_base_path);
 define('WP_CONTENT_URL', '/wp-content');
 define('WP_CONTENT_DIR', '/var/wordpress/wp-content');
 define('WP_PLUGIN_DIR', '/var/wordpress/wp-content/plugins');
+define('WPMU_PLUGIN_DIR', '/var/wordpress/wp-content/mu_plugins');
 define('DOMAIN_CURRENT_SITE', $_SERVER['HTTP_HOST']);
 
 /* That's all, stop editing! Happy blogging. */

@@ -14,7 +14,7 @@ been published. Go click the "Regenerate Public Site" button! </p>
 </body></html>
 __EOF__
 
-cp -r /wordpress/wp-content-read-only/* /var/wordpress/wp-content
+cp -r /wordpress-read-only/wp-content-read-only/* /var/wordpress/wp-content
 
 ./continue.sh
 
