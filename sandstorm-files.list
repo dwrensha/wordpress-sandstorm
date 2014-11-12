@@ -127,6 +127,8 @@ usr/lib/libkrb5.so.3
 usr/lib/libkrb5.so.3.3
 usr/lib/libkrb5support.so.0
 usr/lib/libkrb5support.so.0.1
+usr/lib/liblz4.so.1
+usr/lib/liblz4.so.1.3.1
 usr/lib/liblzma.so.5
 usr/lib/liblzma.so.5.0.7
 usr/lib/libm-2.20.so
@@ -160,7 +162,7 @@ usr/lib/libssl.so.1.0.0
 usr/lib/libsystemd-daemon.so.0
 usr/lib/libsystemd-daemon.so.0.0.12
 usr/lib/libsystemd.so.0
-usr/lib/libsystemd.so.0.4.0
+usr/lib/libsystemd.so.0.5.0
 usr/lib/libtiff.so.5
 usr/lib/libtiff.so.5.2.0
 usr/lib/libuuid.so.1

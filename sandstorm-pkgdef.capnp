@@ -14,10 +14,7 @@ const pkgdef :Spk.PackageDefinition = (
   # your keyring. All updates must be signed with the same key.
 
   manifest = (
-    # This manifest is included in your app package to tell Sandstorm
-    # about your app.
-
-    appVersion = 0,  # Increment this for every release.
+    appVersion = 1,
 
     actions = [
       # Define your "new document" handlers here.
