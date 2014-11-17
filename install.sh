@@ -2,7 +2,7 @@
 
 echo "getting wordpress..."
 
-WORDPRESS_BRANCH=sandstorm-app-3.9
+WORDPRESS_BRANCH=sandstorm-app-4.0
 
 wget "https://github.com/dwrensha/WordPress/archive/${WORDPRESS_BRANCH}.zip"
 unzip ${WORDPRESS_BRANCH}.zip

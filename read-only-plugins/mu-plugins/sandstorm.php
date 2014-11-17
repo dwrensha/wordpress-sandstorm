@@ -29,7 +29,7 @@ function auto_login() {
            $user_id = '';
            if (!$user) {
                $username = $headers['X-Sandstorm-Username'];
-               $user_role = 'contributor';
+               $user_role = get_option('default_role');
                $user_id = wp_insert_user(
                                array( 'user_login' => $sandstorm_user_id,
                                       'user_pass' => 'garply',
