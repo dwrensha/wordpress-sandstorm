@@ -1,0 +1,7 @@
+In `spk dev` mode, plugin uploading does not work. It gives this error:
+"To perform the requested action, WordPress needs to access your web server...."
+
+A lot of plugins don't work. Often this is because they are
+incompatible with the sqlite-integration plugin.
+
+
