@@ -266,8 +266,10 @@ wordpress-read-only/wp-admin/plugin-install.php
 wordpress-read-only/wp-admin/plugins.php
 wordpress-read-only/wp-admin/post-new.php
 wordpress-read-only/wp-admin/post.php
+wordpress-read-only/wp-admin/profile.php
 wordpress-read-only/wp-admin/update-core.php
 wordpress-read-only/wp-admin/update.php
+wordpress-read-only/wp-admin/user-edit.php
 wordpress-read-only/wp-admin/user-new.php
 wordpress-read-only/wp-admin/users.php
 wordpress-read-only/wp-blog-header.php
@@ -682,10 +684,15 @@ wordpress-read-only/wp-includes/js/jquery/jquery.schedule.js
 wordpress-read-only/wp-includes/js/jquery/jquery.ui.touch-punch.js
 wordpress-read-only/wp-includes/js/jquery/suggest.min.js
 wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.accordion.min.js
+wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.autocomplete.min.js
 wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.core.min.js
 wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.draggable.min.js
+wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.droppable.min.js
+wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.menu.min.js
 wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.mouse.min.js
 wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.position.min.js
+wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.resizable.min.js
+wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.selectable.min.js
 wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.slider.min.js
 wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.sortable.min.js
 wordpress-read-only/wp-includes/js/jquery/ui/jquery.ui.widget.min.js

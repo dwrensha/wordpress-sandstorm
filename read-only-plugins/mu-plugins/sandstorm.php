@@ -28,7 +28,7 @@ function auto_login() {
            $user_role = '';
            $user_id = '';
            if (!$user) {
-               $username = $headers['X-Sandstorm-Username'];
+               $username = urldecode($headers['X-Sandstorm-Username']);
                $user_role = get_option('default_role');
                $user_id = wp_insert_user(
                                array( 'user_login' => $sandstorm_user_id,

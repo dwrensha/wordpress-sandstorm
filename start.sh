@@ -1,6 +1,5 @@
 #! /bin/sh
 
-
 mkdir -p /var/lib/nginx
 mkdir -p /var/log/nginx
 mkdir -p /var/run
