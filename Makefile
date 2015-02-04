@@ -1,5 +1,5 @@
 wordpress_repo = https://github.com/dwrensha/wordpress.git
-wordpress_repo_branch = sandstorm-app-4.0
+wordpress_repo_branch = sandstorm-app-4.1
 
 .PHONY: all clean
 
