@@ -67,7 +67,6 @@ usr/bin/sendmail
 usr/bin/sh
 usr/bin/sleep
 usr/bin/wget
-usr/bin/whoami
 usr/lib/gconv/gconv-modules
 usr/lib/ld-2.20.so
 usr/lib/ld-linux-x86-64.so.2
@@ -105,7 +104,6 @@ usr/lib/libexpat.so.1.6.0
 usr/lib/libfontconfig.so.1
 usr/lib/libfontconfig.so.1.8.0
 usr/lib/libfreetype.so.6
-usr/lib/libfreetype.so.6.11.2
 usr/lib/libfreetype.so.6.11.4
 usr/lib/libgcrypt.so.20
 usr/lib/libgcrypt.so.20.0.2
@@ -120,7 +118,6 @@ usr/lib/libgraphite2.so.3.0.1
 usr/lib/libgssapi_krb5.so.2
 usr/lib/libgssapi_krb5.so.2.2
 usr/lib/libharfbuzz.so.0
-usr/lib/libharfbuzz.so.0.936.0
 usr/lib/libharfbuzz.so.0.938.0
 usr/lib/libidn.so.11
 usr/lib/libidn.so.11.6.12
@@ -135,10 +132,8 @@ usr/lib/libkrb5.so.3.3
 usr/lib/libkrb5support.so.0
 usr/lib/libkrb5support.so.0.1
 usr/lib/liblz4.so.1
-usr/lib/liblz4.so.1.4.0
 usr/lib/liblz4.so.1.5.0
 usr/lib/liblzma.so.5
-usr/lib/liblzma.so.5.0.7
 usr/lib/liblzma.so.5.2.0
 usr/lib/libm-2.20.so
 usr/lib/libm.so.6
@@ -154,7 +149,6 @@ usr/lib/libnss_myhostname.so.2
 usr/lib/libpcre.so.1
 usr/lib/libpcre.so.1.2.4
 usr/lib/libpng16.so.16
-usr/lib/libpng16.so.16.15.0
 usr/lib/libpng16.so.16.16.0
 usr/lib/libpthread-2.20.so
 usr/lib/libpthread.so.0
@@ -172,7 +166,6 @@ usr/lib/libssl.so.1.0.0
 usr/lib/libsystemd-daemon.so.0
 usr/lib/libsystemd-daemon.so.0.0.12
 usr/lib/libsystemd.so.0
-usr/lib/libsystemd.so.0.5.0
 usr/lib/libsystemd.so.0.5.1
 usr/lib/libtiff.so.5
 usr/lib/libtiff.so.5.2.0
