@@ -6,8 +6,8 @@ Tags: database, SQLite, PDO
 Author: Kojima Toshiyasu
 Author URI: http://dogwood.skr.jp/
 Requires at least: 3.3
-Tested up to: 3.9
-Stable tag: 1.6.3
+Tested up to: 4.0
+Stable tag: 1.7
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -115,6 +115,10 @@ If export or import fails for some reason, please visit our site and try another
 
 == Frequently Asked Questions ==
 
+= Install stops with 'Error establishing a database connection' =
+
+It is required that you should prepare wp-config.php manually. If you try to make WordPress create wp-config.php, you'll get that message and can't continue install process.
+
 = Database file is not created =
 
 The reason of failure in creating directory or files is often that PHP is not allowed to craete them. Please check your server setting or ask the administrator.
@@ -158,9 +162,16 @@ This plugin doesn't support 'WP_PLUGIN_URL' constant.
 
 == Upgrade Notice ==
 
-Fixed the bug about meta query with BETWEEN comparison which may cause some plugins to work correctly. Upgrade is recommended. When auto upgrading fails, please try manual upgrade via FTP.
+WordPress 4.0 compatibility is checked and some bugs are fixed. Upgrade is recommended. When auto upgrading fails, please try manual upgrade via FTP.
 
 == Changelog ==
+
+= 1.7 (2014-09-05) =
+* Fixed the bug about changing the order of the attachment file in the editor screen.
+* Fixed the bug about the manipulation of CREATE query.
+* Added an 128x128 icon and 256x256 icon.
+* Change for checking the user defined value of pcre.backtrack_limit and using it.
+* WordPress 4.0 compatibilitiy checked.
 
 = 1.6.3 (2014-05-10) =
 * Fixed the bug about manipulating meta query with BETWEEN comparison.

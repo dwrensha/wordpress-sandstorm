@@ -23,14 +23,14 @@ jQuery(document).ready(function($) {
 		$headers = $table.find('thead th').slice(1);
 	}
 	$headers
-	  .wrapInner('<a href="#"></a>')
-	  .addClass('sort');
+		.wrapInner('<a href="#"></a>')
+		.addClass('sort');
 	var rows = $table.find('tbody > tr').get();
 	$headers.bind('click', function(event) {
 		event.preventDefault();
 		var $header = $(this),
-		    sortKey = $header.data('sort').key,
-		    sortDirection = 1;
+			sortKey = $header.data('sort').key,
+			sortDirection = 1;
 		if ($header.hasClass('sorted-asc')) {
 			sortDirection = -1;
 		}
@@ -70,14 +70,14 @@ jQuery(document).ready(function($) {
   var $table = $('#plugins-info');
 	var $headers = $table.find('thead th').slice(0);
 	$headers
-	  .wrapInner('<a href="#"></a>')
-	  .addClass('sort');
+		.wrapInner('<a href="#"></a>')
+		.addClass('sort');
 	var rows = $table.find('tbody > tr').get();
 	$headers.bind('click', function(event) {
 		event.preventDefault();
 		var $header = $(this),
-		    sortKey = $header.data('sort').key,
-		    sortDirection = 1;
+			sortKey = $header.data('sort').key,
+			sortDirection = 1;
 		if ($header.hasClass('sorted-asc')) {
 			sortDirection = -1;
 		}
