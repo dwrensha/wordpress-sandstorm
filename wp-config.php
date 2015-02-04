@@ -35,7 +35,6 @@ if ('https' == substr($sandstorm_base_path, 0, 5)) {
  *
  * @since 2.6.0
  *
- * TODO(sandstorm): generate these on app initialization
  */
 
 define('AUTH_KEY',         $_SERVER['WORDPRESS_AUTH_KEY']);
