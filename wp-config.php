@@ -37,14 +37,15 @@ if ('https' == substr($sandstorm_base_path, 0, 5)) {
  *
  * TODO(sandstorm): generate these on app initialization
  */
-define('AUTH_KEY',         'gIg`TXjHSlygyuy8;T8-vT9MQMy+Ie<KV+|r(7.[K.Y~ov_C0gri-P+`?$!;i=}P');
-define('SECURE_AUTH_KEY',  '|h4BF{kf[Y0QL.l,=CkmlLQDcMLhGY=I9H;nyDx_.:~F j&y=xY1<~|-|=|;$f,N');
-define('LOGGED_IN_KEY',    '+mLY8n`H>w9 #o!=flw#(.l& -,4,Xr_v$,a5m1HdR[/G/:4/zbAm8MB4*55g5jB');
-define('NONCE_KEY',        '!t=XE+c>,)ruUW4>tu3eBN8M&P]GsnI/!xn;ElXs4VW?<_79TfayDyOJ76e|_P6)');
-define('AUTH_SALT',        '[<3VgBGo^eUZnX/t9IF71B`J`(y$Uqv(`d8rc+8](M$qT]W;:i,S&-soWn]=PF*E');
-define('SECURE_AUTH_SALT', 'Gnfxy5{K%.7CTAX|dvyz%;6466dr]uU1!voS.*>Rg-eK^znbs;SLpQO^h7OEQFF-');
-define('LOGGED_IN_SALT',   'Hu=ER#3[l.IxA%5]a2G5&2#1Za-Fi+`WXw@z?b|:3&dIE76_I1DWLqLqU_ %+1i+');
-define('NONCE_SALT',       '*T~9fvR;DCY~6gqw{H-qS|n(~9W>lo.))kSfv]pmH-_WKV7?W-Knh|i2V;n l>|I');
+
+define('AUTH_KEY',         $_SERVER['WORDPRESS_AUTH_KEY']);
+define('SECURE_AUTH_KEY',  $_SERVER['WORDPRESS_SECURE_AUTH_KEY']);
+define('LOGGED_IN_KEY',    $_SERVER['WORDPRESS_LOGGED_IN_KEY']);
+define('NONCE_KEY',        $_SERVER['WORDPRESS_NONCE_KEY']);
+define('AUTH_SALT',        $_SERVER['WORDPRESS_AUTH_SALT']);
+define('SECURE_AUTH_SALT', $_SERVER['WORDPRESS_SECURE_AUTH_SALT']);
+define('LOGGED_IN_SALT',   $_SERVER['WORDPRESS_LOGGED_IN_SALT']);
+define('NONCE_SALT',       $_SERVER['WORDPRESS_NONCE_SALT']);
 
 /**#@-*/
 
