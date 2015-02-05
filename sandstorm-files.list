@@ -4,21 +4,16 @@
 # expect comments or ordering to be retained.
 bin
 continue.sh
-etc/group
-etc/host.conf
 etc/hosts
 etc/ld.so.cache
-etc/localtime
 etc/nginx/fastcgi.conf
 etc/nginx/mime.types
 etc/nginx/nginx.conf
-etc/nsswitch.conf
 etc/passwd
 etc/php/conf.d
 etc/php/php-fpm.conf
 etc/php/php.ini
 etc/postfix/main.cf
-etc/resolv.conf
 etc/ssl/openssl.cnf
 etc/wgetrc
 lib64
@@ -142,11 +137,14 @@ usr/lib/libncursesw.so.5
 usr/lib/libncursesw.so.5.9
 usr/lib/libnsl-2.20.so
 usr/lib/libnsl.so.1
+usr/lib/libnss_compat-2.20.so
+usr/lib/libnss_compat.so.2
 usr/lib/libnss_dns-2.20.so
 usr/lib/libnss_dns.so.2
 usr/lib/libnss_files-2.20.so
 usr/lib/libnss_files.so.2
-usr/lib/libnss_myhostname.so.2
+usr/lib/libnss_nis-2.20.so
+usr/lib/libnss_nis.so.2
 usr/lib/libpcre.so.1
 usr/lib/libpcre.so.1.2.4
 usr/lib/libpng16.so.16
@@ -251,6 +249,7 @@ wordpress-read-only/wp-admin/js/image-edit.min.js
 wordpress-read-only/wp-admin/js/inline-edit-post.min.js
 wordpress-read-only/wp-admin/js/iris.min.js
 wordpress-read-only/wp-admin/js/media-upload.min.js
+wordpress-read-only/wp-admin/js/media.min.js
 wordpress-read-only/wp-admin/js/password-strength-meter.min.js
 wordpress-read-only/wp-admin/js/plugin-install.min.js
 wordpress-read-only/wp-admin/js/post.min.js
@@ -274,6 +273,7 @@ wordpress-read-only/wp-admin/post.php
 wordpress-read-only/wp-admin/profile.php
 wordpress-read-only/wp-admin/update-core.php
 wordpress-read-only/wp-admin/update.php
+wordpress-read-only/wp-admin/upload.php
 wordpress-read-only/wp-admin/user-edit.php
 wordpress-read-only/wp-admin/user-new.php
 wordpress-read-only/wp-admin/users.php
@@ -749,6 +749,7 @@ wordpress-read-only/wp-includes/js/masonry.min.js
 wordpress-read-only/wp-includes/js/mce-view.min.js
 wordpress-read-only/wp-includes/js/media-audiovideo.min.js
 wordpress-read-only/wp-includes/js/media-editor.min.js
+wordpress-read-only/wp-includes/js/media-grid.min.js
 wordpress-read-only/wp-includes/js/media-models.min.js
 wordpress-read-only/wp-includes/js/media-views.min.js
 wordpress-read-only/wp-includes/js/mediaelement/controls.svg

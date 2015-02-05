@@ -14,7 +14,7 @@ const pkgdef :Spk.PackageDefinition = (
   # your keyring. All updates must be signed with the same key.
 
   manifest = (
-    appVersion = 1,
+    appVersion = 2,
 
     actions = [
       # Define your "new document" handlers here.
@@ -34,10 +34,9 @@ const pkgdef :Spk.PackageDefinition = (
     searchPath = [
       ( sourcePath = "."),  # Search this directory first.
       ( sourcePath = "/",    # Then search the system root directory.
-        hidePaths = [ "home", "proc", "sys" ]
-        # You probably don't want the app pulling files from these places,
-        # so we hide them. Note that /dev, /var, and /tmp are implicitly
-        # hidden because Sandstorm itself provides them.
+        hidePaths = [ "home", "proc", "sys",
+                      "etc/nsswitch.conf", "etc/localtime",
+                      "etc/host.conf", "etc/resolv.conf"]
       )
     ]
   ),
