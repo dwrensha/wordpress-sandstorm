@@ -15,6 +15,7 @@
 #include <capnp/rpc-twoparty.h>
 #include <capnp/rpc.capnp.h>
 #include <capnp/ez-rpc.h>
+#include <sandstorm/sandstorm-http-bridge.capnp.h>
 #include <unistd.h>
 
 #include <sandstorm/hack-session.capnp.h>
@@ -26,32 +27,47 @@ namespace sandstorm {
     GetPublicIdMain(kj::ProcessContext& context): context(context) { }
 
     kj::MainFunc getMain() {
-      return kj::MainBuilder(context, "GetPublicId version: 0.0.1",
-                           "Runs the getPublicId command from hack-session.capnp. "
+       return kj::MainBuilder(context, "GetPublicId version: 0.0.2",
+                             "Runs the getPublicId command from hack-session.capnp. "
                              "Returns the ID and the host name as two lines on stdout.")
+        .expectArg("<sessionId>", KJ_BIND_METHOD(*this, setSessionId))
         .callAfterParsing(KJ_BIND_METHOD(*this, run))
         .build();
     }
 
-    kj::MainBuilder::Validity run() {
-
-      capnp::EzRpcClient client("unix:/tmp/sandstorm-api");
-      HackSessionContext::Client session = client.importCap<HackSessionContext>("HackSessionContext");
-
-      auto result = session.getPublicIdRequest().send().wait(client.getWaitScope());
-      auto publicId = result.getPublicId();
-      auto hostname = result.getHostname();
-      auto autoUrl = result.getAutoUrl();
-      auto isDemoUser = result.getIsDemoUser();
-      kj::String msg = kj::str(publicId, "\n", hostname, "\n", autoUrl, "\n",
-                               isDemoUser ? "true" : "false", "\n");
-      kj::FdOutputStream(STDOUT_FILENO).write(msg.begin(), msg.size());
-
+    kj::MainBuilder::Validity setSessionId(kj::StringPtr id) {
+      sessionId = kj::heapString(id);
       return true;
+    }
+
+    kj::MainBuilder::Validity run() {
+      capnp::EzRpcClient client("unix:/tmp/sandstorm-api");
+      SandstormHttpBridge::Client restorer = client.getMain<SandstormHttpBridge>();
+
+      auto request = restorer.getSessionContextRequest();
+      request.setId(sessionId);
+      auto session = request.send().getContext().castAs<HackSessionContext>();
+
+      kj::Promise<void> promise = session.getPublicIdRequest().send().then([](auto result) {
+          auto publicId = result.getPublicId();
+          auto hostname = result.getHostname();
+          auto autoUrl = result.getAutoUrl();
+          auto isDemoUser = result.getIsDemoUser();
+          kj::String msg = kj::str(publicId, "\n", hostname, "\n", autoUrl, "\n",
+                                   isDemoUser ? "true" : "false", "\n");
+          kj::FdOutputStream(STDOUT_FILENO).write(msg.begin(), msg.size());
+        }, [] (auto e) {
+          auto desc = e.getDescription();
+          kj::FdOutputStream(STDOUT_FILENO).write(desc.begin(), desc.size());
+        });
+
+      promise.wait(client.getWaitScope());
+      KJ_UNREACHABLE;
     }
 
   private:
     kj::ProcessContext& context;
+    kj::String sessionId;
   };
 
 } // namespace sandstorm

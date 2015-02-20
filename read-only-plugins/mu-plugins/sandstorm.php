@@ -69,8 +69,9 @@ function sandstorm_publish() {
 
 
 function sandstorm_publishing_info() {
+  $headers = apache_request_headers();
   $lines = array();
-  $result = exec('/sandstorm/bin/getPublicId', $lines);
+  $result = exec('/sandstorm/bin/getPublicId ' . $headers['X-Sandstorm-Session-Id'], $lines);
 
   echo "<p>Your public site is available at: <a target='_blank' href='$lines[2]'>$lines[2]</a></p>";
 
