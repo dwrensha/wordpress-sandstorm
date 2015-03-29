@@ -14,6 +14,7 @@ const pkgdef :Spk.PackageDefinition = (
   # your keyring. All updates must be signed with the same key.
 
   manifest = (
+    appTitle = (defaultText = "WordPress"),
     appVersion = 2,
 
     actions = [
