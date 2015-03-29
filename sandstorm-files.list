@@ -21,8 +21,6 @@ proc/cpuinfo
 publish-it.sh
 read-only-plugins/mu-plugins
 read-only-plugins/mu-plugins/sandstorm.php
-read-only-plugins/root-relative-urls
-read-only-plugins/root-relative-urls/sb_root_relative_urls.php
 read-only-plugins/sqlite-integration
 read-only-plugins/sqlite-integration/db.php
 read-only-plugins/sqlite-integration/functions-5-2.php
@@ -231,6 +229,7 @@ wordpress-read-only/wp-admin/includes/class-wp-plugins-list-table.php
 wordpress-read-only/wp-admin/includes/class-wp-posts-list-table.php
 wordpress-read-only/wp-admin/includes/class-wp-upgrader-skins.php
 wordpress-read-only/wp-admin/includes/class-wp-upgrader.php
+wordpress-read-only/wp-admin/includes/class-wp-users-list-table.php
 wordpress-read-only/wp-admin/includes/comment.php
 wordpress-read-only/wp-admin/includes/dashboard.php
 wordpress-read-only/wp-admin/includes/deprecated.php
@@ -282,6 +281,7 @@ wordpress-read-only/wp-admin/post.php
 wordpress-read-only/wp-admin/tools.php
 wordpress-read-only/wp-admin/update.php
 wordpress-read-only/wp-admin/upload.php
+wordpress-read-only/wp-admin/users.php
 wordpress-read-only/wp-blog-header.php
 wordpress-read-only/wp-config.php
 wordpress-read-only/wp-content
@@ -676,6 +676,13 @@ wordpress-read-only/wp-content-read-only/themes/twentytwelve/sidebar.php
 wordpress-read-only/wp-content-read-only/themes/twentytwelve/single.php
 wordpress-read-only/wp-content-read-only/themes/twentytwelve/style.css
 wordpress-read-only/wp-content-read-only/themes/twentytwelve/tag.php
+wordpress-read-only/wp-includes/ID3/getid3.lib.php
+wordpress-read-only/wp-includes/ID3/getid3.php
+wordpress-read-only/wp-includes/ID3/module.audio.mp3.php
+wordpress-read-only/wp-includes/ID3/module.tag.apetag.php
+wordpress-read-only/wp-includes/ID3/module.tag.id3v1.php
+wordpress-read-only/wp-includes/ID3/module.tag.id3v2.php
+wordpress-read-only/wp-includes/ID3/module.tag.lyrics3.php
 wordpress-read-only/wp-includes/admin-bar.php
 wordpress-read-only/wp-includes/author-template.php
 wordpress-read-only/wp-includes/bookmark-template.php
@@ -731,6 +738,7 @@ wordpress-read-only/wp-includes/functions.wp-styles.php
 wordpress-read-only/wp-includes/general-template.php
 wordpress-read-only/wp-includes/http.php
 wordpress-read-only/wp-includes/images/media
+wordpress-read-only/wp-includes/images/media/audio.png
 wordpress-read-only/wp-includes/images/spinner-2x.gif
 wordpress-read-only/wp-includes/images/uploader-icons-2x.png
 wordpress-read-only/wp-includes/js/admin-bar.min.js
@@ -759,8 +767,15 @@ wordpress-read-only/wp-includes/js/media-editor.min.js
 wordpress-read-only/wp-includes/js/media-grid.min.js
 wordpress-read-only/wp-includes/js/media-models.min.js
 wordpress-read-only/wp-includes/js/media-views.min.js
+wordpress-read-only/wp-includes/js/mediaelement/background.png
+wordpress-read-only/wp-includes/js/mediaelement/bigplay.png
+wordpress-read-only/wp-includes/js/mediaelement/bigplay.svg
+wordpress-read-only/wp-includes/js/mediaelement/controls.png
+wordpress-read-only/wp-includes/js/mediaelement/controls.svg
+wordpress-read-only/wp-includes/js/mediaelement/loading.gif
 wordpress-read-only/wp-includes/js/mediaelement/mediaelement-and-player.min.js
 wordpress-read-only/wp-includes/js/mediaelement/mediaelementplayer.min.css
+wordpress-read-only/wp-includes/js/mediaelement/skipback.png
 wordpress-read-only/wp-includes/js/mediaelement/wp-mediaelement.css
 wordpress-read-only/wp-includes/js/mediaelement/wp-mediaelement.js
 wordpress-read-only/wp-includes/js/mediaelement/wp-playlist.js

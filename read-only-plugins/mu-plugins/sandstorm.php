@@ -148,8 +148,7 @@ add_action( 'wp_dashboard_setup', 'add_sandstorm_dashboard_widget' );
 add_filter( 'plugin_action_links', 'disable_plugin_deactivation', 10, 4 );
 function disable_plugin_deactivation( $actions, $plugin_file, $plugin_data, $context ) {
 
-  $vital_plugins = array('sqlite-integration/sqlite-integration.php',
-                         'root-relative-urls/sb_root_relative_urls.php');
+  $vital_plugins = array('sqlite-integration/sqlite-integration.php');
 
   if (in_array($plugin_file, $vital_plugins)) {
 
