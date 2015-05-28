@@ -16,6 +16,7 @@ const pkgdef :Spk.PackageDefinition = (
   manifest = (
     appTitle = (defaultText = "WordPress"),
     appVersion = 2,
+    appMarketingVersion = (defaultText = "0.0.2"),
 
     actions = [
       # Define your "new document" handlers here.
@@ -47,16 +48,30 @@ const pkgdef :Spk.PackageDefinition = (
   # You should review it later, before shipping your app.
 
   alwaysInclude = ["wordpress-read-only"],
-  # Fill this list with more names of files or directories that should be
-  # included in your package, even if not listed in sandstorm-files.list.
-  # Use this to force-include stuff that you know you need but which may
-  # not have been detected as a dependency during `spk dev`. If you list
-  # a directory here, its entire contents will be included recursively.
-
 
   bridgeConfig = (
     viewInfo = (
-      permissions = [(name = "admin")]
+      permissions = [(name = "admin", title = (defaultText = "admin")),
+                     (name = "editor", title = (defaultText = "editor")),
+                     (name = "author", title = (defaultText = "author")),
+                     (name = "contributor", title = (defaultText = "contributor")),
+                     (name = "subscriber", title = (defaultText = "subscriber"))],
+      roles = [(title = (defaultText = "admin"),
+                permissions = [true, true, true, true, true],
+                verbPhrase = (defaultText = "can do anything")),
+               (title = (defaultText = "editor"),
+                permissions = [false, true, true, true, true],
+                verbPhrase = (defaultText = "can publish posts of others")),
+               (title = (defaultText = "author"),
+                permissions = [false, false, true, true, true],
+                verbPhrase = (defaultText = "can publish own posts")),
+               (title = (defaultText = "contributor"),
+                permissions = [false, false, false, true, true],
+                verbPhrase = (defaultText = "can write posts"),
+                default = true),
+                (title = (defaultText = "subscriber"),
+                permissions = [false, false, false, false, true],
+                verbPhrase = (defaultText = "can read"))]
     )
   )
 );
