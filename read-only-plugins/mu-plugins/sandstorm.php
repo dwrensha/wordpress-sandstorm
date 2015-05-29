@@ -21,31 +21,41 @@ function auto_login() {
     if (is_blog_installed() && !is_user_logged_in()) {
        $headers = apache_request_headers();
        $permissions = $headers['X-Sandstorm-Permissions'];
+       $permissionsArray = explode(',', $permissions);
        $sandstorm_user_id = $headers['X-Sandstorm-User-Id'];
 
        if ($sandstorm_user_id) {
            $user = get_user_by('login', $sandstorm_user_id);
-           $user_role = '';
            $user_id = '';
            if (!$user) {
                $username = urldecode($headers['X-Sandstorm-Username']);
-               $user_role = get_option('default_role');
                $user_id = wp_insert_user(
                                array( 'user_login' => $sandstorm_user_id,
                                       'user_pass' => 'garply',
                                       'nickname' => $username,
                                       'display_name' => $username,
-                                      'role' => $user_role,
+                                      'role' => get_option('default_role'),
                                       'user_email' => ($sandstorm_user_id . '@example.com')));
            } else {
                $user_id = $user->ID;
-               $user_role = $user->role;
            }
 
-           if ($user_role !== 'administrator' && !(FALSE === strpos($permissions, 'admin'))) {
-                 // If user is not admin but does own the grain, make them an admin.
-                 wp_update_user( array( 'ID' => $user_id,
-                                        'role' => 'administrator'));
+           $user_role='';
+           if (in_array('admin', $permissionsArray)) {
+                $user_role = 'administrator';
+           } else if (in_array('editor', $permissionsArray)) {
+                $user_role = 'editor';
+           } else if (in_array('author', $permissionsArray)) {
+                $user_role = 'author';
+           } else if (in_array('contributor', $permissionsArray)) {
+                $user_role = 'contributor';
+           } else if (in_array('subscriber', $permissionsArray)) {
+                $user_role = 'subscriber';
+           }
+
+           if ($user_role) {
+               wp_update_user( array( 'ID' => $user_id,
+                                      'role' => $user_role));
            }
 
            wp_set_current_user($user_id, $sandstorm_user_id);

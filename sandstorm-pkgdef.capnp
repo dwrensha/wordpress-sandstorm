@@ -15,11 +15,10 @@ const pkgdef :Spk.PackageDefinition = (
 
   manifest = (
     appTitle = (defaultText = "WordPress"),
-    appVersion = 2,
-    appMarketingVersion = (defaultText = "0.0.2"),
+    appVersion = 3,
+    appMarketingVersion = (defaultText = "4.2.3-alpha"),
 
     actions = [
-      # Define your "new document" handlers here.
       ( title = (defaultText = "New WordPress Site"),
         command = .startCommand
       )
@@ -29,10 +28,6 @@ const pkgdef :Spk.PackageDefinition = (
   ),
 
   sourceMap = (
-    # Here we defined where to look for files to copy into your package. The
-    # `spk dev` command actually figures out what files your app needs
-    # automatically by running it on a FUSE filesystem. So, the mappings
-    # here are only to tell it where to find files that the app wants.
     searchPath = [
       ( sourcePath = "."),  # Search this directory first.
       ( sourcePath = "/",    # Then search the system root directory.
@@ -44,18 +39,21 @@ const pkgdef :Spk.PackageDefinition = (
   ),
 
   fileList = "sandstorm-files.list",
-  # `spk dev` will write a list of all the files your app uses to this file.
-  # You should review it later, before shipping your app.
 
   alwaysInclude = ["wordpress-read-only"],
 
   bridgeConfig = (
     viewInfo = (
-      permissions = [(name = "admin", title = (defaultText = "admin")),
-                     (name = "editor", title = (defaultText = "editor")),
-                     (name = "author", title = (defaultText = "author")),
-                     (name = "contributor", title = (defaultText = "contributor")),
-                     (name = "subscriber", title = (defaultText = "subscriber"))],
+      permissions = [(name = "admin", title = (defaultText = "admin"),
+                      description = (defaultText = "allows administrative actions")),
+                     (name = "editor", title = (defaultText = "editor"),
+                      description = (defaultText = "allows publishing of posts of others")),
+                     (name = "author", title = (defaultText = "author"),
+                      description = (defaultText = "allows publishing of own posts")),
+                     (name = "contributor", title = (defaultText = "contributor"),
+                      description = (defaultText = "allows writing of posts")),
+                     (name = "subscriber", title = (defaultText = "subscriber"),
+                      description = (defaultText = "allows profile customization"))],
       roles = [(title = (defaultText = "admin"),
                 permissions = [true, true, true, true, true],
                 verbPhrase = (defaultText = "can do anything")),
@@ -71,7 +69,7 @@ const pkgdef :Spk.PackageDefinition = (
                 default = true),
                 (title = (defaultText = "subscriber"),
                 permissions = [false, false, false, false, true],
-                verbPhrase = (defaultText = "can read"))]
+                verbPhrase = (defaultText = "can customize profile"))]
     )
   )
 );
