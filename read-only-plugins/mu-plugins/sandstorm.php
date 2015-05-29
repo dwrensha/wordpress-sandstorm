@@ -193,6 +193,12 @@ function sandstorm_search_form($orig) {
    }
 }
 
+add_filter('editable_roles', 'sandstorm_editable_roles');
+function sandstorm_editable_roles($orig) {
+   // None should be editable because Sandstorm handles role assignment.
+   return array();
+}
+
 // Remove a bunch of things we don't want.
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
