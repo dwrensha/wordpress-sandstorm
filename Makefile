@@ -17,4 +17,5 @@ wordpress-read-only: wordpress/.git
 	cp wp-config.php wordpress-read-only/
 	mv wordpress-read-only/wp-content wordpress-read-only/wp-content-read-only
 	ln -s /var/wordpress/wp-content wordpress-read-only/wp-content
+	cp read-only-plugins/sqlite-integration/db.php wordpress-read-only/wp-content-read-only/
 
