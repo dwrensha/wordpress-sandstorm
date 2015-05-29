@@ -40,7 +40,7 @@ const pkgdef :Spk.PackageDefinition = (
 
   fileList = "sandstorm-files.list",
 
-  alwaysInclude = ["wordpress-read-only"],
+  alwaysInclude = ["wordpress-read-only", "read-only-plugins"],
 
   bridgeConfig = (
     viewInfo = (

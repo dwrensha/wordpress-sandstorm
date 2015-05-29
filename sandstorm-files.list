@@ -27,6 +27,8 @@ read-only-plugins/sqlite-integration/functions-5-2.php
 read-only-plugins/sqlite-integration/functions.php
 read-only-plugins/sqlite-integration/index.php
 read-only-plugins/sqlite-integration/install.php
+read-only-plugins/sqlite-integration/js
+read-only-plugins/sqlite-integration/languages
 read-only-plugins/sqlite-integration/pdodb.class.php
 read-only-plugins/sqlite-integration/pdoengine.class.php
 read-only-plugins/sqlite-integration/query.class.php
@@ -34,6 +36,8 @@ read-only-plugins/sqlite-integration/query_alter.class.php
 read-only-plugins/sqlite-integration/query_create.class.php
 read-only-plugins/sqlite-integration/schema.php
 read-only-plugins/sqlite-integration/sqlite-integration.php
+read-only-plugins/sqlite-integration/styles
+read-only-plugins/sqlite-integration/utilities
 read-only-plugins/sqlite-integration/utilities/database_maintenance.php
 read-only-plugins/sqlite-integration/utilities/documentation.php
 read-only-plugins/sqlite-integration/utilities/patch.php
@@ -269,6 +273,7 @@ wordpress-read-only/wp-admin/js/plugin-install.min.js
 wordpress-read-only/wp-admin/js/post.min.js
 wordpress-read-only/wp-admin/js/postbox.min.js
 wordpress-read-only/wp-admin/js/svg-painter.js
+wordpress-read-only/wp-admin/js/updates.min.js
 wordpress-read-only/wp-admin/js/user-profile.min.js
 wordpress-read-only/wp-admin/js/word-count.min.js
 wordpress-read-only/wp-admin/load-scripts.php
@@ -279,6 +284,7 @@ wordpress-read-only/wp-admin/network.php
 wordpress-read-only/wp-admin/options-general.php
 wordpress-read-only/wp-admin/options-head.php
 wordpress-read-only/wp-admin/options.php
+wordpress-read-only/wp-admin/plugin-editor.php
 wordpress-read-only/wp-admin/plugin-install.php
 wordpress-read-only/wp-admin/plugins.php
 wordpress-read-only/wp-admin/post-new.php
