@@ -62,7 +62,7 @@ namespace sandstorm {
         });
 
       promise.wait(client.getWaitScope());
-      KJ_UNREACHABLE;
+      return true;
     }
 
   private:
