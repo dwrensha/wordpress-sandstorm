@@ -118,7 +118,8 @@ function sandstorm_publishing_info() {
   <br>
   <?php
 
-  echo "<code>host.example.com IN CNAME $lines[1] <br>";
+  $cname = parse_url($lines[2], PHP_URL_HOST);
+  echo "<code>host.example.com IN CNAME $cname <br>";
   echo "sandstorm-www.host.example.com IN TXT $lines[0] </code>";
   ?>
   <p/>

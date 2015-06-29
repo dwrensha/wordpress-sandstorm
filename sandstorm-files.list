@@ -103,7 +103,7 @@ usr/lib/libexpat.so.1.6.0
 usr/lib/libfontconfig.so.1
 usr/lib/libfontconfig.so.1.8.0
 usr/lib/libfreetype.so.6
-usr/lib/libfreetype.so.6.11.4
+usr/lib/libfreetype.so.6.12.0
 usr/lib/libgcc_s.so.1
 usr/lib/libgcrypt.so.20
 usr/lib/libgcrypt.so.20.0.3
@@ -118,7 +118,7 @@ usr/lib/libgraphite2.so.3.0.1
 usr/lib/libgssapi_krb5.so.2
 usr/lib/libgssapi_krb5.so.2.2
 usr/lib/libharfbuzz.so.0
-usr/lib/libharfbuzz.so.0.940.0
+usr/lib/libharfbuzz.so.0.941.0
 usr/lib/libicudata.so.55
 usr/lib/libicudata.so.55.1
 usr/lib/libicuuc.so.55
@@ -185,7 +185,7 @@ usr/lib/libstdc++.so.6.0.21
 usr/lib/libsystemd-daemon.so.0
 usr/lib/libsystemd-daemon.so.0.0.12
 usr/lib/libsystemd.so.0
-usr/lib/libsystemd.so.0.6.0
+usr/lib/libsystemd.so.0.8.0
 usr/lib/libtiff.so.5
 usr/lib/libtiff.so.5.2.0
 usr/lib/libuuid.so.1

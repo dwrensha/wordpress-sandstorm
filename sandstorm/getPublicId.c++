@@ -29,7 +29,7 @@ namespace sandstorm {
     kj::MainFunc getMain() {
        return kj::MainBuilder(context, "GetPublicId version: 0.0.2",
                              "Runs the getPublicId command from hack-session.capnp. "
-                             "Returns the ID and the host name as two lines on stdout.")
+                             "Outputs the return arguments as separate lines on stdout.")
         .expectArg("<sessionId>", KJ_BIND_METHOD(*this, setSessionId))
         .callAfterParsing(KJ_BIND_METHOD(*this, run))
         .build();
