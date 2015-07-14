@@ -136,11 +136,11 @@ usr/lib/libkrb5.so.3.3
 usr/lib/libkrb5support.so.0
 usr/lib/libkrb5support.so.0.1
 usr/lib/liblber-2.4.so.2
-usr/lib/liblber-2.4.so.2.10.3
+usr/lib/liblber-2.4.so.2.10.4
 usr/lib/libldap-2.4.so.2
-usr/lib/libldap-2.4.so.2.10.3
+usr/lib/libldap-2.4.so.2.10.4
 usr/lib/liblz4.so.1
-usr/lib/liblz4.so.1.7.0
+usr/lib/liblz4.so.1.7.1
 usr/lib/liblzma.so.5
 usr/lib/liblzma.so.5.2.1
 usr/lib/libm-2.21.so
@@ -187,7 +187,7 @@ usr/lib/libsystemd-daemon.so.0.0.12
 usr/lib/libsystemd.so.0
 usr/lib/libsystemd.so.0.8.0
 usr/lib/libtiff.so.5
-usr/lib/libtiff.so.5.2.0
+usr/lib/libtiff.so.5.2.2
 usr/lib/libuuid.so.1
 usr/lib/libuuid.so.1.3.0
 usr/lib/libvpx.so.2
@@ -224,6 +224,7 @@ wordpress-read-only/wp-admin/images/spinner-2x.gif
 wordpress-read-only/wp-admin/includes/admin.php
 wordpress-read-only/wp-admin/includes/ajax-actions.php
 wordpress-read-only/wp-admin/includes/bookmark.php
+wordpress-read-only/wp-admin/includes/class-pclzip.php
 wordpress-read-only/wp-admin/includes/class-wp-comments-list-table.php
 wordpress-read-only/wp-admin/includes/class-wp-filesystem-base.php
 wordpress-read-only/wp-admin/includes/class-wp-filesystem-direct.php
@@ -231,6 +232,7 @@ wordpress-read-only/wp-admin/includes/class-wp-list-table.php
 wordpress-read-only/wp-admin/includes/class-wp-plugin-install-list-table.php
 wordpress-read-only/wp-admin/includes/class-wp-plugins-list-table.php
 wordpress-read-only/wp-admin/includes/class-wp-posts-list-table.php
+wordpress-read-only/wp-admin/includes/class-wp-press-this.php
 wordpress-read-only/wp-admin/includes/class-wp-upgrader-skins.php
 wordpress-read-only/wp-admin/includes/class-wp-upgrader.php
 wordpress-read-only/wp-admin/includes/class-wp-users-list-table.php
@@ -252,6 +254,7 @@ wordpress-read-only/wp-admin/includes/schema.php
 wordpress-read-only/wp-admin/includes/screen.php
 wordpress-read-only/wp-admin/includes/taxonomy.php
 wordpress-read-only/wp-admin/includes/template.php
+wordpress-read-only/wp-admin/includes/theme-install.php
 wordpress-read-only/wp-admin/includes/theme.php
 wordpress-read-only/wp-admin/includes/translation-install.php
 wordpress-read-only/wp-admin/includes/update.php
@@ -259,6 +262,7 @@ wordpress-read-only/wp-admin/includes/upgrade.php
 wordpress-read-only/wp-admin/includes/user.php
 wordpress-read-only/wp-admin/index.php
 wordpress-read-only/wp-admin/install.php
+wordpress-read-only/wp-admin/js/bookmarklet.min.js
 wordpress-read-only/wp-admin/js/common.min.js
 wordpress-read-only/wp-admin/js/dashboard.min.js
 wordpress-read-only/wp-admin/js/edit-comments.min.js
@@ -273,6 +277,7 @@ wordpress-read-only/wp-admin/js/plugin-install.min.js
 wordpress-read-only/wp-admin/js/post.min.js
 wordpress-read-only/wp-admin/js/postbox.min.js
 wordpress-read-only/wp-admin/js/svg-painter.js
+wordpress-read-only/wp-admin/js/theme.min.js
 wordpress-read-only/wp-admin/js/updates.min.js
 wordpress-read-only/wp-admin/js/user-profile.min.js
 wordpress-read-only/wp-admin/js/word-count.min.js
@@ -290,6 +295,8 @@ wordpress-read-only/wp-admin/plugins.php
 wordpress-read-only/wp-admin/post-new.php
 wordpress-read-only/wp-admin/post.php
 wordpress-read-only/wp-admin/profile.php
+wordpress-read-only/wp-admin/theme-install.php
+wordpress-read-only/wp-admin/themes.php
 wordpress-read-only/wp-admin/tools.php
 wordpress-read-only/wp-admin/update.php
 wordpress-read-only/wp-admin/upload.php

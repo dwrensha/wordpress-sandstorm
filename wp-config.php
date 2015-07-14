@@ -26,6 +26,11 @@ if ('https' == substr($sandstorm_base_path, 0, 5)) {
   $_SERVER['HTTPS'] = 'on';
 }
 
+// On Blackrock, package storage and grain storage are owned by different UIDs;
+// without the following line, WordPress will try to fall back to FTP for theme
+// and plugin uploads.
+define('FS_METHOD', 'direct');
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
