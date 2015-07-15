@@ -15,8 +15,8 @@ const pkgdef :Spk.PackageDefinition = (
 
   manifest = (
     appTitle = (defaultText = "WordPress"),
-    appVersion = 4,
-    appMarketingVersion = (defaultText = "2015.06.28--4.2.3-alpha"),
+    appVersion = 5,
+    appMarketingVersion = (defaultText = "2015.07.15--4.2.3-alpha"),
 
     actions = [
       ( title = (defaultText = "New WordPress Site"),
