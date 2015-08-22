@@ -221,6 +221,7 @@ wordpress-read-only/wp-admin/custom-header.php
 wordpress-read-only/wp-admin/edit-form-advanced.php
 wordpress-read-only/wp-admin/edit.php
 wordpress-read-only/wp-admin/images/spinner-2x.gif
+wordpress-read-only/wp-admin/includes/admin-filters.php
 wordpress-read-only/wp-admin/includes/admin.php
 wordpress-read-only/wp-admin/includes/ajax-actions.php
 wordpress-read-only/wp-admin/includes/bookmark.php
@@ -233,6 +234,7 @@ wordpress-read-only/wp-admin/includes/class-wp-plugin-install-list-table.php
 wordpress-read-only/wp-admin/includes/class-wp-plugins-list-table.php
 wordpress-read-only/wp-admin/includes/class-wp-posts-list-table.php
 wordpress-read-only/wp-admin/includes/class-wp-press-this.php
+wordpress-read-only/wp-admin/includes/class-wp-site-icon.php
 wordpress-read-only/wp-admin/includes/class-wp-upgrader-skins.php
 wordpress-read-only/wp-admin/includes/class-wp-upgrader.php
 wordpress-read-only/wp-admin/includes/class-wp-users-list-table.php
@@ -277,6 +279,7 @@ wordpress-read-only/wp-admin/js/plugin-install.min.js
 wordpress-read-only/wp-admin/js/post.min.js
 wordpress-read-only/wp-admin/js/postbox.min.js
 wordpress-read-only/wp-admin/js/svg-painter.js
+wordpress-read-only/wp-admin/js/tags-box.min.js
 wordpress-read-only/wp-admin/js/theme.min.js
 wordpress-read-only/wp-admin/js/updates.min.js
 wordpress-read-only/wp-admin/js/user-profile.min.js
@@ -521,6 +524,7 @@ wordpress-read-only/wp-content-read-only/themes/twentyfourteen/page-templates
 wordpress-read-only/wp-content-read-only/themes/twentyfourteen/page-templates/contributors.php
 wordpress-read-only/wp-content-read-only/themes/twentyfourteen/page-templates/full-width.php
 wordpress-read-only/wp-content-read-only/themes/twentyfourteen/page.php
+wordpress-read-only/wp-content-read-only/themes/twentyfourteen/readme.txt
 wordpress-read-only/wp-content-read-only/themes/twentyfourteen/rtl.css
 wordpress-read-only/wp-content-read-only/themes/twentyfourteen/screenshot.png
 wordpress-read-only/wp-content-read-only/themes/twentyfourteen/search.php
@@ -572,6 +576,7 @@ wordpress-read-only/wp-content-read-only/themes/twentyten/loop-single.php
 wordpress-read-only/wp-content-read-only/themes/twentyten/loop.php
 wordpress-read-only/wp-content-read-only/themes/twentyten/onecolumn-page.php
 wordpress-read-only/wp-content-read-only/themes/twentyten/page.php
+wordpress-read-only/wp-content-read-only/themes/twentyten/readme.txt
 wordpress-read-only/wp-content-read-only/themes/twentyten/rtl.css
 wordpress-read-only/wp-content-read-only/themes/twentyten/screenshot.png
 wordpress-read-only/wp-content-read-only/themes/twentyten/search.php
@@ -641,6 +646,7 @@ wordpress-read-only/wp-content-read-only/themes/twentythirteen/js/theme-customiz
 wordpress-read-only/wp-content-read-only/themes/twentythirteen/languages
 wordpress-read-only/wp-content-read-only/themes/twentythirteen/languages/twentythirteen.pot
 wordpress-read-only/wp-content-read-only/themes/twentythirteen/page.php
+wordpress-read-only/wp-content-read-only/themes/twentythirteen/readme.txt
 wordpress-read-only/wp-content-read-only/themes/twentythirteen/rtl.css
 wordpress-read-only/wp-content-read-only/themes/twentythirteen/screenshot.png
 wordpress-read-only/wp-content-read-only/themes/twentythirteen/search.php
@@ -685,6 +691,7 @@ wordpress-read-only/wp-content-read-only/themes/twentytwelve/page-templates
 wordpress-read-only/wp-content-read-only/themes/twentytwelve/page-templates/front-page.php
 wordpress-read-only/wp-content-read-only/themes/twentytwelve/page-templates/full-width.php
 wordpress-read-only/wp-content-read-only/themes/twentytwelve/page.php
+wordpress-read-only/wp-content-read-only/themes/twentytwelve/readme.txt
 wordpress-read-only/wp-content-read-only/themes/twentytwelve/rtl.css
 wordpress-read-only/wp-content-read-only/themes/twentytwelve/screenshot.png
 wordpress-read-only/wp-content-read-only/themes/twentytwelve/search.php
@@ -817,8 +824,10 @@ wordpress-read-only/wp-includes/js/tinymce/plugins/wordpress/plugin.min.js
 wordpress-read-only/wp-includes/js/tinymce/plugins/wpautoresize/plugin.min.js
 wordpress-read-only/wp-includes/js/tinymce/plugins/wpdialogs/plugin.min.js
 wordpress-read-only/wp-includes/js/tinymce/plugins/wpeditimage/plugin.min.js
+wordpress-read-only/wp-includes/js/tinymce/plugins/wpemoji/plugin.min.js
 wordpress-read-only/wp-includes/js/tinymce/plugins/wpgallery/plugin.min.js
 wordpress-read-only/wp-includes/js/tinymce/plugins/wplink/plugin.min.js
+wordpress-read-only/wp-includes/js/tinymce/plugins/wptextpattern/plugin.min.js
 wordpress-read-only/wp-includes/js/tinymce/plugins/wpview/plugin.min.js
 wordpress-read-only/wp-includes/js/tinymce/skins/lightgray/content.min.css
 wordpress-read-only/wp-includes/js/tinymce/skins/lightgray/skin.min.css
