@@ -18,8 +18,33 @@ const pkgdef :Spk.PackageDefinition = (
     appVersion = 5,
     appMarketingVersion = (defaultText = "2015.07.15--4.2.3-alpha"),
 
+    metadata = (
+      icons = (
+        appGrid = (svg = embed "app-graphics/wordpress-128.svg"),
+        grain = (svg = embed "app-graphics/wordpress-24.svg"),
+        market = (svg = embed "app-graphics/wordpress-150.svg"),
+       ),
+       website = "https://wordpress.org/",
+       codeUrl = "https://github.com/dwrensha/wordpress-sandstorm",
+       license = (openSource = gpl2),
+       categories = [webPublishing,],
+       author = (
+         upstreamAuthor = "WordPress Project",
+         contactEmail = "david@sandstorm.io",
+         pgpSignature = embed "pgp-signature",
+       ),
+       pgpKeyring = embed "pgp-keyring",
+       description = (defaultText = embed "description.md"),
+       screenshots = [(width = 448, height = 346, png = embed "screenshot1.png"),
+                      (width = 448, height = 348, png = embed "screenshot2.png")],
+       changeLog = (defaultText = embed "changeLog.md"),
+     ),
+
+
+
     actions = [
       ( title = (defaultText = "New WordPress Site"),
+        nounPhrase = (defaultText = "WordPress site"),
         command = .startCommand
       )
     ],
