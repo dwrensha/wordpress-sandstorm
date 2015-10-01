@@ -183,7 +183,7 @@ function sandstorm_search_form($orig) {
     } else {
        // Use Google search for the published static site.
 
-      $form = '<form action="http://google.com/search" id="searchform" class="search-form" method="get" name="google-search" target="_blank">'.
+      $form = '<form action="http://google.com/search" id="searchform" class="search-form" method="post" name="google-search" target="_blank">'.
             '<input type="hidden" name="sitesearch" class="google-search-input">'.
             '<input type="text" name="q" id="s" placeholder="Search" class="search-field">'.
             '</form>'.
