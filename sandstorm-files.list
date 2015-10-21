@@ -211,6 +211,7 @@ usr/share/zoneinfo/America/New_York
 usr/share/zoneinfo/UTC
 wordpress-read-only/index.php
 wordpress-read-only/wp-admin
+wordpress-read-only/wp-admin/about.php
 wordpress-read-only/wp-admin/admin-ajax.php
 wordpress-read-only/wp-admin/admin-footer.php
 wordpress-read-only/wp-admin/admin-header.php
@@ -223,6 +224,8 @@ wordpress-read-only/wp-admin/custom-header.php
 wordpress-read-only/wp-admin/edit-form-advanced.php
 wordpress-read-only/wp-admin/edit.php
 wordpress-read-only/wp-admin/images/spinner-2x.gif
+wordpress-read-only/wp-admin/images/w-logo-white.png
+wordpress-read-only/wp-admin/images/wordpress-logo-white.svg
 wordpress-read-only/wp-admin/includes/admin-filters.php
 wordpress-read-only/wp-admin/includes/admin.php
 wordpress-read-only/wp-admin/includes/ajax-actions.php
@@ -303,6 +306,7 @@ wordpress-read-only/wp-admin/profile.php
 wordpress-read-only/wp-admin/theme-install.php
 wordpress-read-only/wp-admin/themes.php
 wordpress-read-only/wp-admin/tools.php
+wordpress-read-only/wp-admin/update-core.php
 wordpress-read-only/wp-admin/update.php
 wordpress-read-only/wp-admin/upload.php
 wordpress-read-only/wp-admin/user-edit.php

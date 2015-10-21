@@ -1,3 +1,6 @@
+### v2015.10.21 (4.3.2-alpha)
+- Update to upstream version 4.3.2-alpha.
+- Metadata: adjust action title and noun phrase to avoid repeitition.
 ### v2015.08.23 (4.3)
 - Add to the description a paragraph about static publishing.
 ### v2015.08.22 (4.3)
