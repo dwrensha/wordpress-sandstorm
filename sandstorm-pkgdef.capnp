@@ -43,8 +43,8 @@ const pkgdef :Spk.PackageDefinition = (
 
 
     actions = [
-      ( title = (defaultText = "New WordPress Site"),
-        nounPhrase = (defaultText = "WordPress site"),
+      ( title = (defaultText = "New site"),
+        nounPhrase = (defaultText = "site"),
         command = .startCommand
       )
     ],
