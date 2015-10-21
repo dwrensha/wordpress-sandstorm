@@ -35,6 +35,7 @@ const pkgdef :Spk.PackageDefinition = (
        ),
        pgpKeyring = embed "pgp-keyring",
        description = (defaultText = embed "description.md"),
+       shortDescription = (defaultText = "Content management"),
        screenshots = [(width = 448, height = 346, png = embed "screenshot1.png"),
                       (width = 448, height = 348, png = embed "screenshot2.png")],
        changeLog = (defaultText = embed "changeLog.md"),
