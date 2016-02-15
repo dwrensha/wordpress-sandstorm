@@ -88,7 +88,7 @@ function sandstorm_publishing_info() {
   ?>
 
    <p>
-      To regenerate your public site, click the below button.
+      To rebuild your public site, click the below button.
       Note that you must click this button after making any changes
       in order for those changes to become visible on the public site.
    </p>
@@ -97,7 +97,7 @@ function sandstorm_publishing_info() {
    <p class="submit">
     <input type="hidden" name="action" value="generate_static">
    <?php wp_nonce_field( 'generate-static' ); ?>
-   <?php submit_button(__('Regenerate Public Site'), 'primary', 'generate', false); ?>
+   <?php submit_button(__('Rebuild Public Site'), 'primary', 'generate', false); ?>
    <br class="clear"/>
    </p>
   </form>
