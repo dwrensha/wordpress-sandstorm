@@ -58,6 +58,10 @@ function auto_login() {
                                       'role' => $user_role));
            }
 
+           if ($headers['X-Sandstorm-User-Picture']) {
+             update_user_meta( $user_id, 'sandstorm_user_picture', $headers['X-Sandstorm-User-Picture']);
+           }
+
            wp_set_current_user($user_id, $sandstorm_user_id);
            wp_set_auth_cookie($user_id);
            do_action('wp_login', $sandstorm_user_id);
@@ -198,6 +202,18 @@ add_filter('editable_roles', 'sandstorm_editable_roles');
 function sandstorm_editable_roles($orig) {
    // None should be editable because Sandstorm handles role assignment.
    return array();
+}
+
+
+add_filter('get_avatar', 'sandstorm_get_avatar', 1, 5);
+function sandstorm_get_avatar($avatar, $id_or_email, $size, $default, $alt) {
+  if (is_numeric($id_or_email)) {
+    $avatar_url = get_user_meta($id_or_email, 'sandstorm_user_picture', True);
+    if ($avatar_url) {
+      $avatar = "<img alt='{$alt}' src='{$avatar_url}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
+    }
+  }
+  return $avatar;
 }
 
 // Remove a bunch of things we don't want.
