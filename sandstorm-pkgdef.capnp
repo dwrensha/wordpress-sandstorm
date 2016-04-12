@@ -1,22 +1,14 @@
 @0xaecd42915acc793f;
 
 using Spk = import "/sandstorm/package.capnp";
-# This imports:
-#   $SANDSTORM_HOME/latest/usr/include/sandstorm/package.capnp
-# Check out that file to see the full, documented package definition format.
 
 const pkgdef :Spk.PackageDefinition = (
-  # The package definition. Note that the spk tool looks specifically for the
-  # "pkgdef" constant.
-
   id = "aax9j672p6z8n7nyupzvj2nmumeqd4upa0f7mgu8gprwmy53x04h",
-  # Your app ID is actually its public key. The private key was placed in
-  # your keyring. All updates must be signed with the same key.
 
   manifest = (
     appTitle = (defaultText = "WordPress"),
-    appVersion = 8,
-    appMarketingVersion = (defaultText = "2015.10.21 (4.3.2-alpha)"),
+    appVersion = 9,
+    appMarketingVersion = (defaultText = "2016.04.11 (4.4.2)"),
 
     metadata = (
       icons = (
