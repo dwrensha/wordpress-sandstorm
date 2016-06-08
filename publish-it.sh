@@ -20,6 +20,9 @@ done
 find $TMPDIR -type f -exec sed -i "s|${REPLACE_URL}/|/|g" {} \;
 find $TMPDIR -type f -exec sed -i "s|${REPLACE_URL}|/|g" {} \; # URLs without a trailing / need to be changed to point the index
 
+# Make sure to copy over all of the uploads. This is necessary because the current release of wget
+# does not yet support srcset in img tags.
+cp -r /var/wordpress/wp-content/uploads $TMPDIR/wp-content/
 
 mv $STATICDIR ${STATICDIR}_tmp
 mv $TMPDIR $STATICDIR
