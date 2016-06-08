@@ -1,3 +1,5 @@
+### v2016.06.07 (4.4.2)
+- Fix bug where image uploads would fail to show up in the published site.
 ### v2016.04.11 (4.4.2)
 - Update to upstream version 4.4.2.
 - Use X-Sandstorm-User-Picture for avatars.
