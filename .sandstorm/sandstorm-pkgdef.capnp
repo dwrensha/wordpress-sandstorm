@@ -48,6 +48,7 @@ const pkgdef :Spk.PackageDefinition = (
   sourceMap = (
     searchPath = [
       ( sourcePath = "."),  # Search this directory first.
+      ( sourcePath = "/opt/app" ),
       ( sourcePath = "/",    # Then search the system root directory.
         hidePaths = [ "home", "proc", "sys",
                       "etc/nsswitch.conf", "etc/localtime",

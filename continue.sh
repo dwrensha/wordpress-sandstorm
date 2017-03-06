@@ -1,6 +1,6 @@
 #! /bin/sh
 
-/usr/bin/php-fpm
+/usr/sbin/php5-fpm --fpm-config /etc/php/php-fpm.conf -c /etc/php/php.ini
 echo "started php-fpm. status code:" $?
 
 CGICONF=/var/fastcgi.conf
@@ -19,7 +19,7 @@ fastcgi_param WORDPRESS_LOGGED_IN_SALT;
 fastcgi_param WORDPRESS_NONCE_SALT;
 
 
-/usr/bin/nginx -g "pid /var/run/nginx.pid;"
+/usr/sbin/nginx -g "pid /var/run/nginx.pid;"
 echo "started nginx. status code:" $?
 
 
