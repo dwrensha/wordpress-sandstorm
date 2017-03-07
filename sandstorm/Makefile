@@ -14,11 +14,10 @@ clean:
 	rm -rf bin tmp
 
 bin/getPublicId: tmp/genfiles getPublicId.c++
-	@mkdir -p bin
-	@$(CXX) getPublicId.c++ tmp/sandstorm/*.capnp.c++ -o bin/getPublicId -static $(CXXFLAGS2) `pkg-config capnp-rpc --cflags --libs`
+	mkdir -p bin
+	$(CXX) getPublicId.c++ tmp/sandstorm/*.capnp.c++ -o bin/getPublicId -static $(CXXFLAGS2) `pkg-config capnp-rpc --cflags --libs`
 
 tmp/genfiles: /opt/sandstorm/latest/usr/include/sandstorm/*.capnp
-	@echo "generating capnp files..."
-	@mkdir -p tmp
-	@capnp compile --src-prefix=/opt/sandstorm/latest/usr/include -oc++:tmp /opt/sandstorm/latest/usr/include/sandstorm/*.capnp
-	@touch tmp/genfiles
+	mkdir -p tmp
+	capnp compile --src-prefix=/opt/sandstorm/latest/usr/include -oc++:tmp /opt/sandstorm/latest/usr/include/sandstorm/*.capnp
+	touch tmp/genfiles
